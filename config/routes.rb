@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#delete'
 
   get '/searches' => 'searches#index'
+  post '/searches' => 'searches#create'
 
   root to: 'searches#index'
 end

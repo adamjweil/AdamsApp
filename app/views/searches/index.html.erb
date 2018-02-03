@@ -1,1 +1,32 @@
-<h1>Hello World</h1>
+<header>
+    <nav>
+      <h4><center>Adam's Search App</center></h4>
+        <% current_user %>
+          <% if logged_in? %>
+            <a href='/users/show'>Prior Searches</a>
+            <a href='/logout'>Log out</a>
+          <% else %>
+          <a href='/sessions/new'>Login</a>
+            <a href='/users/new'>Register</a>
+        <% end %>
+    </nav>
+  </header>
+
+<html>
+  <body>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+  <% if logged_in? %>
+    <form action="/searches" method="post">
+  		<fieldset><legend>Search URL:</legend>
+        <input  type="text" name="search[url]" placeholder="Search...">
+  			<input type="submit" value="Search" id="sub">
+  		</fieldset>
+  	</form>
+    <% else %>
+    <h2>You need to be logged in to search ;)</h2>
+    <% end %>
+  </body>
+</html>
