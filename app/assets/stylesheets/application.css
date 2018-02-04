@@ -26,18 +26,21 @@ header nav {
   border-radius: 10px;
   font-size: 1em;
   position: fixed;
-  width: 1200px;
+  display: block;
+  width: 90%;
 }
 header nav a {
-  color: inherit;
+  color: #C0C0C0;
   text-decoration: none;
   display: inline-block;
   padding: 2em 1em .5em;
   -webkit-transition: all .3s ease-in;
+  font-weight: bold;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 header nav a:hover {
-  text-decoration: underline;
-  color: #FFFAF0;
   background: #777;
 }
 header nav ul {
@@ -48,5 +51,113 @@ header nav li {
 }
 
 header nav a.active {
-  background: rgba(255,255,255,0.3);
+  color: #FFDC00;
+}
+
+nav img {
+  z-index: 1000;
+  height: 3.2em;
+  position: absolute;
+  left: 25px;
+  top: 5px;
+  transition: all 0.5s linear;
+}
+nav span {
+  position: absolute;
+  left: 80px;
+  top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  /*color: #FFDC00;*/
+  color: #00B4CC;
+  transition: all 0.5s ease-in;
+}
+
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans);*/
+
+.search {
+  width: 100%;
+  position: relative
+}
+.search p {
+  font-size: 10px;
+  font-weight: 100;
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #00B4CC;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  position: absolute;
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.user-searches {
+  width: 70%;
+  position: relative;
+  left: 100px;
+  top: 100px;
+}
+
+.prev-searches {
+  position: relative;
+  display: block;
+  left: 10px;
+}
+.tags {
+  display: block;
+  margin-left: 100px;
+}
+.tags h1 {
+  color: #FF0033;
+  font-weight: 300;
+}
+.tags li {
+  font-weight: 500;
+}
+.register {
+  position: relative;
+  display: block;
+  left: 30%;
+  margin-top: 100px;
+  background-color: #F8F8F8;
+  width: 30%;
+}
+
+.register input {
+  width: 80%;
+  align-items: center;
+  height: 30px;
+  border-radius: 5px;
+  margin: 10px;
 }

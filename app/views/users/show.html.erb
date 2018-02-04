@@ -1,9 +1,13 @@
-<header>
+<html>
+  <header>
     <nav>
-      <h4><center>Adam's Search App</center></h4>
+      <img class=""
+        src="https://user-images.githubusercontent.com/25589910/35773866-87c2cbca-092c-11e8-9648-64f016493a56.png">
+      <span>Adam's Web Scraper!</span>
         <% current_user %>
           <% if logged_in? %>
             <a href='/'>Home</a>
+            <a href='/users/show'>Prior Searches</a>
             <a href='/logout'>Log out</a>
           <% else %>
             <a href='/sessions/new'>Login</a>
@@ -11,19 +15,17 @@
         <% end %>
     </nav>
   </header>
-
-<html>
   <body>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-  <%  find_user %>
-  <div id="user-searches">
-        <h5>Searches</h5>
-          <% current_user.searches.each do |search| %>
-            <p><a href="/searches/<%= search.id %>"><%= search.url %></a> </p>
-          <% end %>
+
+  <div class="user-searches">
+    <% find_user %>
+        <h3>Previous Searches</h3>
+          <div class="prev-searches">
+            <ul>
+              <% current_user.searches.each do |search| %>
+              <li><a href="/searches/<%= search.id %>"><%= search.url %></a></li>
+            <% end %>
+          <div>
       </div>
   </body>
 </html>

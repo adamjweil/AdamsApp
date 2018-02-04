@@ -9,12 +9,17 @@ class SearchesController < ApplicationController
 
   def show
     @search = Search.find_by(id: params[:id])
-
+    count = 0
+    begin
     # Get raw source code
     @raw_page = HTTParty.get(@search.url)
     # Convert source code into usable Nokogiri object
     @noko_page = Nokogiri::HTML(@raw_page)
-
+  rescue Errno::ECONNRESET => e
+    count += 1
+    retry unless count > 10
+    puts "tried 10 times and couldn't get #{@search.url}: #{e}"
+  end
     # Initialize empty arrays that are going to store content from H1, H2, and H3 tags, as well as any links. I am choosing to store this data into arrays, rather than a string or a hash because I am going to need to iterate over this data in my view page, and I find iterating over an array to be the easiest option.
     @h1_tags = []
     @h2_tags = []
@@ -55,15 +60,23 @@ class SearchesController < ApplicationController
     find_user
     @search = Search.new(search_params)
     @search.user_id = @user.id
-    raw = HTTParty.get(@search.url)
-    parsed_page = Nokogiri::HTML(raw)
 
-    @search.html = parsed_page
+      @raw = HTTParty.get(@search.url)
+      @parsed_page = Nokogiri::HTML(@raw)
+      # @search.html = parsed_page
+      # @search.save
+
       if @search.save
-          redirect_to "/searches/#{@search.id}"
-        else
-          render plain: "failure", status: 422
+        redirect_to "/searches/#{@search.id}"
+      else
+        render plain: "tried 5 times and couldn't get #{@search.url}"
       end
+
+      # if @search.save
+      #     redirect_to "/searches/#{@search.id}"
+      #   # else
+      #   #   render plain: "failure", status: 422
+      # end
   end
 
   private
