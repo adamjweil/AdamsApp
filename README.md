@@ -3,8 +3,6 @@
 <h3>
 This application is meant to provide an easy way to scrape websites for the content located within it's h1, h2 and h3 tags, as well as for any links. For seamless web scraping, you need fill out a very brief registration, which includes entering an email, username and password, after which you will be immediately granted access to use the search feature. For the best results, please enter the full URL of the website you are trying to scrape. As an example, if you wanted to scrape facebook.com, you would need to enter https://www.facebook.com. After entering a URL that you want to scrape, the content located within the tags mentioned above will be displayed to you in the most organized way possible.
 
-# Heroku Details
-
 # Instructions For Use
 To use this application, please follow the below instructions.
   1. Clone down the repo to your local storage
@@ -18,7 +16,9 @@ To use this application, please follow the below instructions.
       - rails s
   5. Navigate to the localhost port that is shown in the terminal to access the application.
 
-
+# Heroku Details
+  If you prefer not to clone this repo down to your local machine, you can also access the web application via Heroku. It is hosted on the URL posted below:
+    - https://git.heroku.com/adamscrapeapp.git
 # Tech Details
   This web application was built in Ruby, compiled using a Rails framework, and has a postgresql database. If you have any questions, please shoot me an email @ adamjweil@gmail.com.  
 
