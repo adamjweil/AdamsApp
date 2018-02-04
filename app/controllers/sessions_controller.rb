@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to "/"
     else
-      render json: { message: "the session create failed, you are stupid, roman said so....." }
+      render json: { message: "failed login, pls try again" }
     end
   end
 

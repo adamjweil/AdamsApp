@@ -6,8 +6,8 @@
         <span>Adam's Web Scraper!</span>
           <% current_user %>
             <% if logged_in? %>
-              <a href='/users/show'>Prior Searches</a>
               <a href='/'>Home</a>
+              <a href='/users/show'>Prior Searches</a>
               <a href='/logout'>Log out</a>
             <% else %>
               <a href='/sessions/new'>Login</a>
@@ -22,46 +22,52 @@
 
   <body>
     <div class="tags">
-      <div class="h1_tags">
-        <h1>H1 Tags</h1>
-          <% if @h1_tags %>
-            <ul>
-                <% @h1_tags.each do |h1| %>
-                <li> <%= h1 %> </li>
-                <% end %>
-            </ul>
-          <% end %>
+      <% if @h1_tags.empty? & @h2_tags.empty? & @h3_tags.empty? & @links.empty? %>
+        <div class="errors">
+          <h2>"Couldn't connect to the URL you entered... Pls enter another URL in the correct format. example: https://www.facebook.com"</h2>
         <div>
-      <div class="h2_tags">
-        <h1>H2 Tags</h1>
-          <% if @h2_tags %>
-            <ul>
-                <% @h2_tags.each do |h2| %>
-                <li> <%= h2 %> </li>
-                <% end %>
-            </ul>
-          <% end %>
-      <div>
-      <div class="h2_tags">
-        <h1>H3 Tags</h1>
-          <% if @h3_tags %>
-            <ul>
-                <% @h3_tags.each do |h3| %>
-                <li> <%= h3 %> </li>
-                <% end %>
-            </ul>
-          <% end %>
-      <div>
-      <div class="links">
-        <h1>Links</h1>
-            <% if @links %>
+      <% else %>
+        <div class="h1_tags">
+          <h1>H1 Tags</h1>
+            <% if @h1_tags %>
               <ul>
-                  <% @links.each do |link| %>
-                  <li><a href="<%= link %>" target="_blank"> <%= link %> </a></li>
+                  <% @h1_tags.each do |h1| %>
+                  <li> <%= h1 %> </li>
                   <% end %>
               </ul>
             <% end %>
-      <div>
+          <div>
+        <div class="h2_tags">
+          <h1>H2 Tags</h1>
+            <% if @h2_tags %>
+              <ul>
+                  <% @h2_tags.each do |h2| %>
+                  <li> <%= h2 %> </li>
+                  <% end %>
+              </ul>
+            <% end %>
+        <div>
+        <div class="h2_tags">
+          <h1>H3 Tags</h1>
+            <% if @h3_tags %>
+              <ul>
+                  <% @h3_tags.each do |h3| %>
+                  <li> <%= h3 %> </li>
+                  <% end %>
+              </ul>
+            <% end %>
+        <div>
+        <div class="links">
+          <h1>Links</h1>
+              <% if @links %>
+                <ul>
+                    <% @links.each do |link| %>
+                    <li><a href="<%= link %>" target="_blank"> <%= link %> </a></li>
+                    <% end %>
+                </ul>
+              <% end %>
+        <div>
+          <% end %>
     <div>
   </body>
 </html>
