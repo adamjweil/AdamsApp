@@ -1,0 +1,33 @@
+<header>
+    <nav>
+      <h4><center>Adam's Search App</center></h4>
+        <% current_user %>
+          <% if logged_in? %>
+            <a href='/users/show'>Prior Searches</a>
+            <a href='/logout'>Log out</a>
+          <% else %>
+          <a href='/sessions/new'>Login</a>
+            <a href='/users/new'>Register</a>
+        <% end %>
+    </nav>
+  </header>
+
+<html>
+
+  <body>
+    <h1> "H1 Tags" </h1>
+    <p><%= @search.url %> </p>
+
+
+    <h1> "H2 Tags" </h1>
+    <% @search.h2_tags.each do |h2| %>
+    <p> <%= h2 %> </p>
+    <% end %>
+
+    <h1> "H3 Tags" </h1>
+    <% @search.h3_tags.each do |h3| %>
+    <p> <%= h3 %> </p>
+    <% end %>
+
+  </body>
+</html>

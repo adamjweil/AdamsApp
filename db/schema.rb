@@ -18,6 +18,10 @@ ActiveRecord::Schema.define(version: 20180203210609) do
   create_table "searches", force: :cascade do |t|
     t.string "url"
     t.string "user_id"
+    t.string "html"
+    t.text "h1_tags", default: [], array: true
+    t.text "h2_tags", default: [], array: true
+    t.text "h3_tags", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

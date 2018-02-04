@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   get '/searches' => 'searches#index'
   post '/searches' => 'searches#create'
+  get '/searches/:id' => 'searches#show'
 
   root to: 'searches#index'
 end
