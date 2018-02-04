@@ -22,7 +22,7 @@
   <div id="user-searches">
         <h5>Searches</h5>
           <% current_user.searches.each do |search| %>
-            <p><a href="/search/<%= search.id %>"><%= search.url %></a> </p>
+            <p><a href="/searches/<%= search.id %>"><%= search.url %></a> </p>
           <% end %>
       </div>
   </body>

@@ -1,3 +1,6 @@
+require 'Nokogiri'
+require 'HTTParty'
+
 class ApplicationController < ActionController::Base
   # protect_from_forgery with: :exception
 
@@ -43,4 +46,14 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by(id: session[:user_id])
   end
   helper_method :current_user
+
+  def url?
+    !!@search
+    # if Search.exists?(user_id: current_user.id)
+    #   return true
+    # else
+    #   return false
+    # end
+  end
+  helper_method :url?
 end
