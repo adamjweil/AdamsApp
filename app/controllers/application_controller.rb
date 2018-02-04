@@ -2,7 +2,6 @@ require 'Nokogiri'
 require 'HTTParty'
 
 class ApplicationController < ActionController::Base
-  # protect_from_forgery with: :exception
 
   def create_user
     @user = User.new(params[:user])
@@ -21,7 +20,7 @@ class ApplicationController < ActionController::Base
     user = User.authenticate(params[:user][:email], params[:user][:password_digest])
       if user
         session[:user_id] = user.id
-        redirect '/restaurants'
+        redirect '/'
      else
        status 422
         @errors = ["Login Attempt Failed."]
@@ -47,13 +46,4 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
-  def url?
-    !!@search
-    # if Search.exists?(user_id: current_user.id)
-    #   return true
-    # else
-    #   return false
-    # end
-  end
-  helper_method :url?
 end
