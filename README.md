@@ -1,6 +1,7 @@
   # AdamsApp
 # Summary
-This application is meant to provide an easy way to scrape websites for the content located within it's <h1>, <h2> and <h3> tags, as well as for any links. For seamless web scraping, you need fill out a very brief registration, which includes entering an email, username and password, after which you will be immediately granted access to use the search feature. For the best results, please enter the full URL of the website you are trying to scrape. As an example, if you wanted to scrape facebook.com, you would need to enter https://www.facebook.com. After entering a URL that you want to scrape, the content located within the tags mentioned above will be displayed to you in the most organized way possible.
+<h1>
+This application is meant to provide an easy way to scrape websites for the content located within it's h1, h2 and h3 tags, as well as for any links. For seamless web scraping, you need fill out a very brief registration, which includes entering an email, username and password, after which you will be immediately granted access to use the search feature. For the best results, please enter the full URL of the website you are trying to scrape. As an example, if you wanted to scrape facebook.com, you would need to enter https://www.facebook.com. After entering a URL that you want to scrape, the content located within the tags mentioned above will be displayed to you in the most organized way possible.
 
 # Instructions For Use
 To use this application, please follow the below instructions.
