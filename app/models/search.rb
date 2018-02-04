@@ -7,9 +7,7 @@ class Search < ApplicationRecord
 
   belongs_to :user
 
-  serialize :h1_tags
-  serialize :h2_tags
-  serialize :h3_tags
+
   # def h1_tags
   #   url = @search.url
   #   @page = HTTParty.get("#{url}")

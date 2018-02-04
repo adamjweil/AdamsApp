@@ -1,19 +1,18 @@
-
-<header>
-    <nav>
-      <h4><center>Adam's Search App</center></h4>
-        <% current_user %>
-          <% if logged_in? %>
-            <a href='/users/show'>Prior Searches</a>
-            <a href='/logout'>Log out</a>
-          <% else %>
-          <a href='/sessions/new'>Login</a>
-            <a href='/users/new'>Register</a>
-        <% end %>
-    </nav>
+<html>
+  <header>
+      <nav>
+        <h4><center>Adam's Search App</center></h4>
+          <% current_user %>
+            <% if logged_in? %>
+              <a href='/users/show'>Prior Searches</a>
+              <a href='/logout'>Log out</a>
+              <% else %>
+              <a href='/sessions/new'>Login</a>
+              <a href='/users/new'>Register</a>
+            <% end %>
+      </nav>
   </header>
 
-<html>
   <body>
     <br></br>
     <br></br>

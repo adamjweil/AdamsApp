@@ -1,33 +1,58 @@
-<header>
-    <nav>
-      <h4><center>Adam's Search App</center></h4>
-        <% current_user %>
-          <% if logged_in? %>
-            <a href='/users/show'>Prior Searches</a>
-            <a href='/logout'>Log out</a>
-          <% else %>
-          <a href='/sessions/new'>Login</a>
-            <a href='/users/new'>Register</a>
-        <% end %>
-    </nav>
+<html>
+  <header>
+      <nav>
+        <h4><center>Adam's Search App</center></h4>
+          <% current_user %>
+            <% if logged_in? %>
+              <a href='/users/show'>Prior Searches</a>
+              <a href='/'>Home</a>
+              <a href='/logout'>Log out</a>
+            <% else %>
+              <a href='/sessions/new'>Login</a>
+              <a href='/users/new'>Register</a>
+          <% end %>
+      </nav>
   </header>
 
-<html>
+    <br></br>
+    <br></br>
+    <br></br>
 
   <body>
-    <h1> "H1 Tags" </h1>
-    <p><%= @search.url %> </p>
+    <h1>H1 Tags</h1>
+      <% if @h1_tags %>
+        <ul>
+            <% @h1_tags.each do |h1| %>
+            <li> <%= h1 %> </li>
+            <% end %>
+        </ul>
+      <% end %>
 
+    <h1>H2 Tags</h1>
+      <% if @h2_tags %>
+        <ul>
+            <% @h2_tags.each do |h2| %>
+            <li> <%= h2 %> </li>
+            <% end %>
+        </ul>
+      <% end %>
 
-    <h1> "H2 Tags" </h1>
-    <% @search.h2_tags.each do |h2| %>
-    <p> <%= h2 %> </p>
-    <% end %>
+    <h1>H3 Tags</h1>
+      <% if @h3_tags %>
+        <ul>
+            <% @h3_tags.each do |h3| %>
+            <li> <%= h3 %> </li>
+            <% end %>
+        </ul>
+      <% end %>
 
-    <h1> "H3 Tags" </h1>
-    <% @search.h3_tags.each do |h3| %>
-    <p> <%= h3 %> </p>
-    <% end %>
-
+    <h1>Links</h1>
+        <% if @links %>
+          <ul>
+              <% @links.each do |link| %>
+              <li> <%= link %> </li>
+              <% end %>
+          </ul>
+        <% end %>
   </body>
 </html>
