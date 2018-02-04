@@ -15,17 +15,17 @@
         <% end %>
     </nav>
   </header>
-  <body>
 
-  <div class="user-searches">
-    <% find_user %>
-        <h3>Previous Searches</h3>
-          <div class="prev-searches">
-            <ul>
-              <% current_user.searches.each do |search| %>
-              <li><a href="/searches/<%= search.id %>"><%= search.url %></a></li>
-            <% end %>
-          <div>
-      </div>
+  <body>
+    <div class="user-searches">
+      <% find_user %>
+          <h3>Previous Searches</h3>
+            <div class="prev-searches">
+              <ul>
+                <% current_user.searches.each do |search| %>
+                <li><a href="/searches/<%= search.id %>"><%= search.url %></a></li>
+              <% end %>
+            <div>
+    </div>
   </body>
 </html>

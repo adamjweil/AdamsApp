@@ -1,42 +1,37 @@
-<header>
-    <nav>
-      <!-- <span class="movetext">Adam's Search App</span> -->
-      <h4><center>Adam's Search App</center></h4>
-        <% current_user %>
-          <% if logged_in? %>
-            <a href='/users/show'>Prior Searches</a>
-            <a href='/logout'>Log out</a>
-          <% else %>
-          <a href='/sessions/new'>Login</a>
-            <a href='/users/new'>Register</a>
-        <% end %>
-    </nav>
+<html>
+  <header>
+      <nav>
+        <img class=""
+          src="https://user-images.githubusercontent.com/25589910/35773866-87c2cbca-092c-11e8-9648-64f016493a56.png">
+        <span>Adam's Web Scraper!</span>
+          <% current_user %>
+            <% if logged_in? %>
+              <a href='/'>Home</a>
+              <a href='/users/show'>Prior Searches</a>
+              <a href='/logout'>Log out</a>
+              <% else %>
+              <!-- <a href='/sessions/new'>Login</a> -->
+              <a href='/users/new'>Register</a>
+              <a href='/'>Home</a>
+            <% end %>
+      </nav>
   </header>
 
-  <html>
   <head>
-  <title>Adam's Search App</title>
-
-  <style type="text/css">
-  		html,body{height: 100%; padding:0; margin:0;}
-  		form{ width:30em;height:14.5em; margin:-5em auto 0 auto; position: relative; top:30%; border:1px dotted #ccc; padding:.25em; }
-  		fieldset{ margin:0;   border:0;padding:0;}
-  		legend{float:left; font-size: 200%; text-align: center; color:blue; font-weight: bold; border-bottom: 1px solid blue; width:15em;  padding:0; }
-  		label, label+ input {display:inline; float:left;margin-top:1em;}
-  		label{text-align: right; width:28%; clear: left; margin-top:.8em; }
-  		label+ input{ width:60%; padding:.25em; ; margin-left:.5em; border: 1px inset;  margin-left: }
-  		#sub{  margin-top:1em; position: relative; float:left;clear: left; margin-left: 29%}
-  </style>
+    <title>Adam's Search App</title>
   </head>
+
   <body>
-  	<form action="/sessions" method="post">
-  		<fieldset><legend>Login</legend>
-        <label for="email">Email: </label>
-        <input  type="text" name="user[email]" placeholder="Email">
-  			<label for="password">Password: </label>
-        <input  type="password" name="user[password]" placeholder="Password" >
-  			<input type="submit" value="Login" id="sub">
-  		</fieldset>
-  	</form>
+    <div class="register">
+    	<form action="/sessions" method="post">
+    		<fieldset><legend>Login</legend>
+          <!-- <label for="email">Email: </label> -->
+          <input  type="text" name="user[email]" placeholder="Email">
+    			<!-- <label for="password">Password: </label> -->
+          <input  type="password" name="user[password]" placeholder="Password" >
+    			<input type="submit" value="Login" id="sub">
+    		</fieldset>
+    	</form>
+    </div>
   </body>
   </html>
