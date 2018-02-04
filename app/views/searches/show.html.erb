@@ -1,7 +1,9 @@
 <html>
   <header>
       <nav>
-        <h4><center>Adam's Search App</center></h4>
+        <img class=""
+          src="https://user-images.githubusercontent.com/25589910/35773866-87c2cbca-092c-11e8-9648-64f016493a56.png">
+        <span>Adam's Web Scraper!</span>
           <% current_user %>
             <% if logged_in? %>
               <a href='/users/show'>Prior Searches</a>
@@ -19,40 +21,47 @@
     <br></br>
 
   <body>
-    <h1>H1 Tags</h1>
-      <% if @h1_tags %>
-        <ul>
-            <% @h1_tags.each do |h1| %>
-            <li> <%= h1 %> </li>
+    <div class="tags">
+      <div class="h1_tags">
+        <h1>H1 Tags</h1>
+          <% if @h1_tags %>
+            <ul>
+                <% @h1_tags.each do |h1| %>
+                <li> <%= h1 %> </li>
+                <% end %>
+            </ul>
+          <% end %>
+        <div>
+      <div class="h2_tags">
+        <h1>H2 Tags</h1>
+          <% if @h2_tags %>
+            <ul>
+                <% @h2_tags.each do |h2| %>
+                <li> <%= h2 %> </li>
+                <% end %>
+            </ul>
+          <% end %>
+      <div>
+      <div class="h2_tags">
+        <h1>H3 Tags</h1>
+          <% if @h3_tags %>
+            <ul>
+                <% @h3_tags.each do |h3| %>
+                <li> <%= h3 %> </li>
+                <% end %>
+            </ul>
+          <% end %>
+      <div>
+      <div class="links">
+        <h1>Links</h1>
+            <% if @links %>
+              <ul>
+                  <% @links.each do |link| %>
+                  <li><a href="<%= link %>" target="_blank"> <%= link %> </a></li>
+                  <% end %>
+              </ul>
             <% end %>
-        </ul>
-      <% end %>
-
-    <h1>H2 Tags</h1>
-      <% if @h2_tags %>
-        <ul>
-            <% @h2_tags.each do |h2| %>
-            <li> <%= h2 %> </li>
-            <% end %>
-        </ul>
-      <% end %>
-
-    <h1>H3 Tags</h1>
-      <% if @h3_tags %>
-        <ul>
-            <% @h3_tags.each do |h3| %>
-            <li> <%= h3 %> </li>
-            <% end %>
-        </ul>
-      <% end %>
-
-    <h1>Links</h1>
-        <% if @links %>
-          <ul>
-              <% @links.each do |link| %>
-              <li> <%= link %> </li>
-              <% end %>
-          </ul>
-        <% end %>
+      <div>
+    <div>
   </body>
 </html>
