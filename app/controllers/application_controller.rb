@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     @user.password = params[:user][:password]
       if @user.save
         session[:user_id] = @user.id
-        redirect "/"
+        redirect_to "/"
       else
         status 422
         @errors = @user.errors.full_messages
@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
     user = User.authenticate(params[:user][:email], params[:user][:password_digest])
       if user
         session[:user_id] = user.id
-        redirect '/'
+        redirect_to "/"
      else
        status 422
         @errors = ["Login Attempt Failed."]
