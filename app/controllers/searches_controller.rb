@@ -49,7 +49,7 @@ class SearchesController < ApplicationController
         end
         }
     end
-  else
+  # else
   end
 
   def new
