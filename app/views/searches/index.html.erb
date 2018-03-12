@@ -4,15 +4,7 @@
         <img class=""
           src="https://user-images.githubusercontent.com/25589910/35773866-87c2cbca-092c-11e8-9648-64f016493a56.png">
         <span>Adam's Web Scraper!</span>
-          <% current_user %>
-            <% if logged_in? %>
-              <a href='/'>Home</a>
-              <a href='/users/show'>Prior Searches</a>
-              <a href='/logout'>Log out</a>
-              <% else %>
-              <a href='/sessions/new'>Login</a>
-              <a href='/users/new'>Register</a>
-            <% end %>
+            <a href='/users/show'>Prior Searches</a>
       </nav>
   </header>
 
@@ -22,25 +14,20 @@
     <br></br>
     <br></br>
 
-  <% if logged_in? %>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <div class="wrap">
-    <div class="search">
-      <form action="/searches" method="post">
-        <input type="text" class="searchTerm" name="search[url]" placeholder="Search...">
+    <div class="wrap">
+      <div class="search">
+        <form action="/searches" method="post">
+          <input type="text" class="searchTerm" name="search[url]" placeholder="Search...">
 
-        <button type="submit" class="searchButton">
-          <i class="fa fa-search"></i>
-        </button>
-      </form>
-      <p>**Please enter url in the following format: https://www.facebook.com </p>
+          <button type="submit" class="searchButton">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        <p>**Please enter url in the following format: https://www.facebook.com </p>
+      </div>
     </div>
-  </div>
-
-    <% else %>
-      <h2>You need to be logged in to search ;)</h2>
-    <% end %>
 
   </body>
 </html>

@@ -4,15 +4,8 @@
         <img class=""
           src="https://user-images.githubusercontent.com/25589910/35773866-87c2cbca-092c-11e8-9648-64f016493a56.png">
         <span>Adam's Web Scraper!</span>
-          <% current_user %>
-            <% if logged_in? %>
-              <a href='/'>Home</a>
-              <a href='/users/show'>Prior Searches</a>
-              <a href='/logout'>Log out</a>
-            <% else %>
-              <a href='/sessions/new'>Login</a>
-              <a href='/users/new'>Register</a>
-          <% end %>
+          <a href='/'>Home</a>
+          <a href='/users/show'>Prior Searches</a>
       </nav>
   </header>
 
@@ -72,7 +65,7 @@
                 </ul>
               <% end %>
         <div>
-          
+
           <% end %>
     <div>
   </body>
