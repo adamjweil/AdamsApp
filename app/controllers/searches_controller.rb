@@ -60,10 +60,11 @@ class SearchesController < ApplicationController
   end
 
   def create
-    find_user
+    # find_user
     @search = Search.new(search_params)
-    @search.user_id = @user.id
-
+    # @search.user_id = @user.id
+    @search.user_id = session.id
+    # binding.pry
     begin
       @raw = HTTParty.get(@search.url)
       @parsed_page = Nokogiri::HTML(@raw)
