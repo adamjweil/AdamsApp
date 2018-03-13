@@ -1,5 +1,5 @@
-require 'Nokogiri'
-require 'HTTParty'
+# require 'Nokogiri'
+# require 'HTTParty'
 
 class ApplicationController < ActionController::Base
 
