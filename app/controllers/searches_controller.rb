@@ -1,6 +1,6 @@
-require 'HTTParty'
-require 'nokogiri'
-require 'pry'
+# require 'HTTParty'
+# require 'nokogiri'
+# require 'pry'
 
 class SearchesController < ApplicationController
 
