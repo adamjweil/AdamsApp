@@ -16,6 +16,7 @@ class SearchesController < ApplicationController
       @raw_page = HTTParty.get(@search.url)
       # Convert source code into usable Nokogiri object
       @noko_page = Nokogiri::HTML(@raw_page)
+      # binding.pry
     rescue StandardError
       false
     end
@@ -24,7 +25,12 @@ class SearchesController < ApplicationController
     @h1_tags = []
     @h2_tags = []
     @h3_tags = []
+    @h4_tags = []
+    @h5_tags = []
+    @p_tags = []
+    @li_tags = []
     @links = []
+    @imgs = []
 
     if @noko_page
       # Store content from h1 tags into the array created above.
@@ -39,15 +45,34 @@ class SearchesController < ApplicationController
       @noko_page.css('h3').each do |h3|
         @h3_tags << h3.text
       end
+      # Store content from h4 tags into the array created above.
+      @noko_page.css('h4').each do |h4|
+        @h4_tags << h4.text
+      end
+      # Store content from p tags into the array created above.
+      @noko_page.css('p').each do |p_tag|
+        @p_tags << p_tag.text
+      end
+      # Store content from li tags into the array created above.
+      @noko_page.css('li').each do |li|
+        @li_tags << li.text
+      end
+
+      @imgs = @noko_page.css('img').map { |x| x['src'] }
+
+      # @noko_page.css('img').attr('src').each do |src|
+      #   @imgs << src.text
+      # end
+      @links = @noko_page.css('a').map { |x| x['href'] }
       ### IMPORTANT: Since external links can be in the form of hrefs or img tags, I need to create a case statement to make sure I am capturing both of these
-      @links = @noko_page.css('a', 'img').map{ |tag|
-        case tag.name.downcase
-          when 'a'
-            tag['href']
-          when 'img'
-            tag['src']
-        end
-        }
+      # @links = @noko_page.css('a', 'img').map{ |tag|
+      #   case tag.name.downcase
+      #     when 'a'
+      #       tag['href']
+      #     when 'img'
+      #       tag['src']
+      #   end
+      #   }
     end
   # else
   end
