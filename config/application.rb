@@ -16,14 +16,6 @@ require 'nokogiri'
 # require 'bcrypt'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-require 'aws-sdk-s3'  # v2: require 'aws-sdk'
-
-# Using Random UUIDs to Avoid Collisions when Testing
-require 'securerandom'
-bucket = "homepagescraper-#{SecureRandom.uuid}"
-
-# Setup
-s3 = Aws::S3::Client.new(region: "us-west-2")
 
 Bundler.require(*Rails.groups)
 
