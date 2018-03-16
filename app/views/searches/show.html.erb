@@ -14,6 +14,12 @@
     <br></br>
 
   <body>
+    <div>
+      <h5><%#= @raw_page %></h5>
+    </div>
+    <div>
+      <h5><%#= @noko_page %></h5>
+    </div>
     <div class="tags">
       <% if @h1_tags.empty? & @h2_tags.empty? & @h3_tags.empty? & @links.empty? %>
         <div class="errors">
@@ -21,52 +27,133 @@
         <div>
 
       <% else %>
-
-        <div class="h1_tags">
+      <div class="linkHeader">
+        <legend>Quick Links:</legend>
+        <form class="pageLinks" method="get" action="#h1_tags">
+          <button type="submit"><b style="color:'black';">&lt;h1&gt;</b>Tags<b style="color:'black';">&lt;/h1&gt</b></button>
+        </form>
+        <form class="pageLinks" method="get" action="#h2_tags">
+          <button type="submit"><b style="color:'black';">&lt;h2&gt;</b>Tags<b style="color:'black';">&lt;/h2&gt</b></button>
+        </form>
+        <form class="pageLinks" method="get" action="#h3_tags">
+          <button type="submit"><b style="color:'black';">&lt;h3&gt;</b>Tags<b style="color:'black';">&lt;/h3&gt</b></button>
+        </form>
+        <form class="pageLinks" method="get" action="#h4_tags">
+          <button type="submit"><b style="color:'black';">&lt;h4&gt;</b>Tags<b style="color:'black';">&lt;/h4&gt</b></button>
+        </form>
+        <form class="pageLinks" method="get" action="#links">
+          <button type="submit"><b style="color:'black';">&lt;a&gt;</b>Links<b style="color:'black';">&lt;/a&gt</b></button>
+        </form>
+        <form class="pageLinks" method="get" action="#photoContainer">
+          <button type="submit"><b style="color:'black';">&lt;img&gt;</b>Photos<b style="color:'black';">&lt;/img&gt</b></button>
+        </form>
+      </div>
+        <div id="h1_tags">
           <h1>H1 Tags</h1>
-            <% if @h1_tags %>
+            <% if @h1_tags.length > 0 %>
               <ul>
                   <% @h1_tags.each do |h1| %>
                   <li> <%= h1 %> </li>
                   <% end %>
               </ul>
+              <% else %>
+              <div class="noTags">
+                <p>No H1 tags on this website!</p>
+              </div>
             <% end %>
-          <div>
+          </div>
 
-        <div class="h2_tags">
+        <div id="h2_tags">
           <h1>H2 Tags</h1>
-            <% if @h2_tags %>
+            <% if @h2_tags.length > 0 %>
               <ul>
                   <% @h2_tags.each do |h2| %>
                   <li> <%= h2 %> </li>
                   <% end %>
               </ul>
+              <% else %>
+              <div class="noTags">
+                <p>No H2 tags on this website!</p>
+              </div>
             <% end %>
-        <div>
+        </div>
 
-        <div class="h2_tags">
+        <div id="h3_tags">
           <h1>H3 Tags</h1>
-            <% if @h3_tags %>
+            <% if @h3_tags.length > 0 %>
               <ul>
                   <% @h3_tags.each do |h3| %>
                   <li> <%= h3 %> </li>
                   <% end %>
               </ul>
+              <% else %>
+              <div class="noTags">
+                <p>No H3 tags on this website!</p>
+              </div>
             <% end %>
-        <div>
+        </div>
 
-        <div class="links">
+        <div id="h4_tags">
+          <h1>H4 Tags</h1>
+            <% if @h4_tags.length > 0 %>
+              <ul>
+                  <% @h4_tags.each do |h4| %>
+                  <li> <%= h4 %> </li>
+                  <% end %>
+              </ul>
+              <% else %>
+              <div class="noTags">
+                <p>No H4 tags on this website!</p>
+              </div>
+            <% end %>
+        </div>
+
+        <div id="p_tags">
+          <h1>P Tags</h1>
+            <% if @p_tags.length > 0 %>
+              <ul>
+                  <% @p_tags.each do |p_tag| %>
+                  <li> <%= p_tag %> </li>
+                  <% end %>
+              </ul>
+              <% else %>
+              <div class="noTags">
+                <p>No P tags on this website!</p>
+              </div>
+            <% end %>
+        </div>
+
+        <div id="links">
           <h1>Links</h1>
-              <% if @links %>
+              <% if @links.length > 0 %>
                 <ul>
                     <% @links.each do |link| %>
                     <li><a href="<%= link %>" target="_blank"> <%= link %> </a></li>
                     <% end %>
                 </ul>
+                <% else %>
+                <div class="noTags">
+                  <p>No links on this website!</p>
+                </div>
               <% end %>
-        <div>
+        </div>
+
+        <div id="photoContainer">
+          <h1>Photos</h1>
+              <% if @imgs.length > 0 %>
+                <% @imgs.each do |i| %>
+              <div class="photos">
+                <img src="<%= i %>"></img>
+                <% end %>
+              </div>
+              <% else %>
+              <div class="noTags">
+                <p>No photos on this website!</p>
+              </div>
+              <% end %>
+        </div>
 
           <% end %>
-    <div>
+    </div>
   </body>
 </html>
