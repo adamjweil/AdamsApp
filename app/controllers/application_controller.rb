@@ -47,4 +47,5 @@ class ApplicationController < ActionController::Base
     @session_searches = Search.all.where(user_id: session.id)
   end
   helper_method :find_searches_by_session
+
 end

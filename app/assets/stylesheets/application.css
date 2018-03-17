@@ -76,23 +76,31 @@ nav span {
 /*@import url(https://fonts.googleapis.com/css?family=Open+Sans);*/
 
 .search {
-  width: 100%;
-  position: relative
-}
-.search p {
-  font-size: 10px;
-  font-weight: 100;
+  width: 300px;
+  /* width: 100%; */
+  position: absolute;
 }
 
+
 .searchTerm {
+  position: absolute;
   float: left;
-  width: 100%;
+  width: 300px;
   border: 3px solid #00B4CC;
   padding: 5px;
   height: 20px;
   border-radius: 5px;
   outline: none;
   color: #9DBFAF;
+}
+.instructions {
+  position: absolute;
+  top: 30px;
+  font-size:
+}
+.instructions p {
+  font-size: 10px;
+  font-weight: 100;
 }
 
 .searchTerm:focus{
@@ -115,10 +123,10 @@ nav span {
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
-  width: 30%;
+  width: 1000px;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 350px;
+  left: 850px;
   transform: translate(-50%, -50%);
 }
 
@@ -204,4 +212,19 @@ legend {
 div,button,b,form {font-family: futura;}
 .noTags p {
   color: blue;
+}
+.recentSearches {
+  margin-top: -40px;
+  width: 1000px;
+  margin-left: 75px;
+}
+.recentSearches ol {
+  /* list-style-type: disc; */
+  list-style-position: inside;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  width: 1000px;
+  /* width: 70%; */
+  /* margin-left: 10%; */
 }

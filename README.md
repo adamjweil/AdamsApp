@@ -9,6 +9,11 @@ This web application was built in Ruby, compiled using a Rails framework, and ha
 
 I hope you enjoy the application!
 
+# Heroku Details
+  *This web application can be found using the URL pasted below:*
+    https://murmuring-anchorage-57613.herokuapp.com/
+
+  **If you would prefer to clone this repository down to your machine and run locally, please follow the instructions below**
 # Instructions For Use
 To use this application, please follow the below instructions.
   1. Clone down the repo to your local storage
@@ -21,9 +26,6 @@ To use this application, please follow the below instructions.
   4. Start your local server using the below command
       - rails s
   5. Navigate to the localhost port that is shown in the terminal to access the application.
-
-# Heroku Details
-  If you prefer not to clone this repo down to your local machine, you will be able to access this web application through Heroku very shortly. As soon as it's up I will post the URL below.
 
 # Screenshots
   - Home Page

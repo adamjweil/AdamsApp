@@ -25,9 +25,22 @@
             <i class="fa fa-search"></i>
           </button>
         </form>
+
+      </div>
+      <div class="instructions">
         <p>**Please enter url in the following format: https://www.facebook.com </p>
       </div>
-    </div>
 
+    </div>
+    <div class="recentSearches">
+        <h2>Recently Scraped</h2>
+      <% if @searches.length > 0 %>
+        <ol>
+          <% @searches.each do |search| %>
+            <li><a href="/searches/<%= search.id %>"> <%= search.url %> </li>
+            <% end %>
+        </ol>
+        <% end %>
+    </div>
   </body>
 </html>
