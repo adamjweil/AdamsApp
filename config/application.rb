@@ -1,5 +1,6 @@
 require_relative 'boot'
 
+require "rails"
 require 'rails/all'
 require 'nokogiri'
 # require "rails"
