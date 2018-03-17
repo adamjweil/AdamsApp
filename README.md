@@ -29,7 +29,7 @@ To use this application, please follow the below instructions.
 
 # Screenshots
   - Home Page
-  <img width="1193" alt="search_page" src="https://user-images.githubusercontent.com/25589910/37548315-5d648df0-294d-11e8-8a1c-ad6c8a7ca442.png">
+  <img width="1193" alt="search_page" src="https://user-images.githubusercontent.com/25589910/37551046-b568680c-296e-11e8-8414-9aacc9f093ac.png">
 
   - Search Results (Top of Page)
   <img width="1331" alt="results_pags" src="https://user-images.githubusercontent.com/25589910/37548327-70427b26-294d-11e8-9ca9-25526505619b.png">
