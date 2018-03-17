@@ -1,6 +1,3 @@
-# require 'Nokogiri'
-# require 'HTTParty'
-
 class ApplicationController < ActionController::Base
 
   def create_user

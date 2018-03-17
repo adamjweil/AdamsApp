@@ -1,7 +1,3 @@
-# require 'HTTParty'
-# require 'nokogiri'
-# require 'pry'
-
 class SearchesController < ApplicationController
 
   def index
