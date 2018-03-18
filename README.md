@@ -29,13 +29,13 @@ To use this application, please follow the below instructions.
 
 # Screenshots
   - Home Page
-  <img width="1193" alt="search_page" src="https://user-images.githubusercontent.com/25589910/37551046-b568680c-296e-11e8-8414-9aacc9f093ac.png">
+  <img width="1193" alt="search_page" src="https://user-images.githubusercontent.com/25589910/37563366-8683a212-2a55-11e8-91fe-6a1b6e85946a.png">
 
   - Search Results (Top of Page)
-  <img width="1331" alt="results_pags" src="https://user-images.githubusercontent.com/25589910/37548327-70427b26-294d-11e8-9ca9-25526505619b.png">
+  <img width="1331" alt="results_pags" src="https://user-images.githubusercontent.com/25589910/37563370-9684dcda-2a55-11e8-89cb-efdd2cd52651.png">
 
   - Search Results (Links / Photos)
-  <img width="1331" alt="results_pags" src="https://user-images.githubusercontent.com/25589910/37548339-833cff1c-294d-11e8-9c9e-cf768eb3ea46.png">
+  <img width="1331" alt="results_pags" src="https://user-images.githubusercontent.com/25589910/37563374-a50a7e5e-2a55-11e8-881e-bcdd912fbbb4.png">
 
   - Scrape History
-  <img width="1187" alt="prev_searches" src="https://user-images.githubusercontent.com/25589910/37548351-9e530210-294d-11e8-89dc-2b44127d2e6c.png">
+  <img width="1187" alt="prev_searches" src="https://user-images.githubusercontent.com/25589910/37563377-b2c7265a-2a55-11e8-9a1c-77097f2e9f38.png">

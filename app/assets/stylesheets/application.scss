@@ -1,0 +1,106 @@
+@import "bootstrap";
+
+.navbar-btn:hover {
+  background-color: grey;
+  -webkit-transition-duration: 0.4s;
+}
+.navbar-right ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+.navbar-right li {
+  display: inline;
+  float: left;
+}
+.navbar-right li a {
+  display: block;
+  background-color: grey;
+  border-radius: 10px;
+  border: 1px solid black;
+  color: white;
+  margin-bottom: 0px;
+  margin-right: 20px;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 18px;
+  text-decoration: none;
+}
+.navar-right a:hover{
+  -webkit-transition-duration: 0.4s;
+  background-color: white;
+}
+nav {
+  height: 70px;
+}
+.linkHeader {
+  display: inline-block;
+  border-right: 1px solid grey;
+  margin-top: 10px;
+  height: 350px;
+  width: 170px;
+}
+.linkHeader button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  width: 150px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.linkHeader button:hover {
+  -webkit-transition-duration: 0.4s;
+  color: black;
+  border: 1px solid black;
+}
+.linkHeader h3 {
+  font-size: 14px;
+  font-weight: 900;
+  color: grey;
+}
+#photoContainer {
+  display: block;
+}
+.photos img {
+  width: 200px;
+  float: left;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+input[type="text"] {
+  width: 310px;
+  margin-right: 10px;
+}
+.scrape-input {
+  margin-top: 50px;
+}
+.recently-scraped {
+  width: 1000px;
+  margin-left: 75px;
+}
+.recently-scraped ol {
+  list-style-position: inside;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+.instructions h5 {
+  font-size: 10px;
+  width: 400px;
+  margin-left: 10px;
+  margin-top: -15px;
+}
+.recently-scraped {
+  margin-top: 25px;
+}
