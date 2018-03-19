@@ -1,5 +1,7 @@
   # AdamsApp - Web Scraping Made Easy!
-
+  -->Check this web app out now at
+      https://murmuring-anchorage-57613.herokuapp.com/
+      
 # Summary
 This application is meant to provide an easy way to scrape websites for the content located within it's h1, h2, h3, h4 and p tags, as well as for any links and photos. You can easily access your search history by navigating to the 'Prior Searches' page.  For best results, please enter the full URL of the webpage you are trying to scrape. As an example, if you wanted to scrape facebook.com, you would need to enter https://www.facebook.com. After typing in and submitting the URL you are trying to scrape, the content located within the tags mentioned above will be displayed to you in the most organized way possible.
 
