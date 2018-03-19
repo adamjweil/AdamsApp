@@ -1,7 +1,7 @@
 class SearchesController < ApplicationController
 
   def index
-    @searches = Search.order("created_at DESC").last(10)
+    @searches = Search.order('created_at asc').last(10)
   end
 
   def show

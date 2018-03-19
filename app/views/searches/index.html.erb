@@ -24,7 +24,7 @@
       <div class="col recently-scraped">
         <% if @searches.length > 0 %>
           <ol>
-            <% @searches.each do |search| %>
+            <% @searches.reverse.each do |search| %>
               <li><a href="/searches/<%= search.id %>"> <%= search.url %> </a></li>
               <% end %>
           </ol>
@@ -37,7 +37,7 @@
         <div class="col-md-8">
             <form class"form-inline" action="/searches" method="post">
               <div class="search-form form-group">
-                  <input type="text" class="form-control-lg" id="search[url]" name="search[url]" placeholder="Enter URL Here...">   
+                  <input type="text" class="form-control-lg" id="search[url]" name="search[url]" placeholder="Enter URL Here...">
                   <button type="submit" class="btn btn-info btn-lg"><i class="glyphicon glyphicon-search"></i>Scrape</button>
               </div>
               <div class="instruction-help alert alert-warning" role="alert">
