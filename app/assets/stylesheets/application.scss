@@ -110,7 +110,15 @@ input[type="text"] {
   margin-top: 25px;
 }
 .scrape-results {
-  margin-top: 50px;
+  // margin-top: 50px;
+}
+.scraped-url {
+  margin-top: 20px;
+  margin-left: 10%;
+  height: 50px;
+}
+.scraped-url h4 {
+  // text-align: center;
 }
 .quick-links-sidebar {
   margin-top: 20px;
@@ -125,11 +133,18 @@ input[type="text"] {
   height: 40px;
 }
 .instruction-help p {
-  font-style: italic;
-  margin-left: 95px;
-  margin-top: -10px;
-  font-size: 12px;
-  color: red;
+  // font-style: italic;
+  // margin-left: 95px;
+  // margin-top: -10px;
+  // font-size: 12px;
+  // color: red;
+}
+.instruction-help {
+  line-height: 30px;
+  margin-bottom: 1px;
+  height: 30px;
+  padding: 0px 15px;
+  width: 600px;
 }
 .scrape-results h1 {
   color: #696969;
@@ -137,4 +152,12 @@ input[type="text"] {
 .user-searches {
   margin-left: 100px;
   margin-top: 40px;
+}
+.nav-pills a {
+  color: white;
+}
+.incorrect-url {
+  margin-left: 200px;
+  // margin-right: 20%;
+  margin-top: 20px;
 }

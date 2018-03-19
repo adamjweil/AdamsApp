@@ -1,21 +1,20 @@
 <html>
-<header>
-  <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
-      <img src="https://user-images.githubusercontent.com/25589910/35773866-87c2cbca-092c-11e8-9648-64f016493a56.png" width="40" height="40" class="d-inline-block align-top" alt="">
-      <b>Adam's Web Scraper!</b>
-    </a>
-    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="/" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="/users/show" role="tab" aria-controls="pills-profile" aria-selected="false">Histroy</a>
-      </li>
-    </ul>
-
-  </nav>
-</header>
+  <header>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="https://user-images.githubusercontent.com/25589910/35773866-87c2cbca-092c-11e8-9648-64f016493a56.png" width="40" height="40" class="d-inline-block align-top" alt="">
+        <b>Adam's Web Scraper!</b>
+      </a>
+      <ul class="nav nav-pills justify-content-end" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="pill" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" href="/users/show">History</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
   <body>
     <div class="container-fluid">
@@ -36,21 +35,17 @@
 
         </div>
         <div class="col-md-8">
-          <!-- <div class="row"> -->
             <form class"form-inline" action="/searches" method="post">
               <div class="search-form form-group">
                   <input type="text" class="form-control-lg" id="search[url]" name="search[url]" placeholder="Enter URL Here...">   
                   <button type="submit" class="btn btn-info btn-lg"><i class="glyphicon glyphicon-search"></i>Scrape</button>
               </div>
-              <div class="instruction-help form-group">
-                  <p class="help-block">**Please enter URL in the following format:<br> <b>https://www.facebook.com</b></p>
+              <div class="instruction-help alert alert-warning" role="alert">
+                <p>Please enter URL in the following format:&nbsp;&nbsp; <b>https://www.facebook.com</b></p>
               </div>
-            
             </form>
-
-          </div>
         </div>
-
+        </div>
 
         <div class="col-md-2">
 
