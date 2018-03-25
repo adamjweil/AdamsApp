@@ -32,46 +32,56 @@ class SearchesController < ApplicationController
     if @noko_page
       # Store content from h1 tags into the array created above.
       @noko_page.css('h1').each do |h1|
-        @h1_tags << h1.text
+        if h1.text.strip.length > 1
+          @h1_tags << h1.text
+        end
       end
       # Store content from h2 tags into the array created above.
       @noko_page.css('h2').each do |h2|
-        @h2_tags << h2.text
+        # binding.pry
+        if h2.text.strip.length > 1
+          @h2_tags << h2.text
+        end
       end
       # Store content from h3 tags into the array created above.
       @noko_page.css('h3').each do |h3|
-        @h3_tags << h3.text
+        if h3.text.strip.length > 1
+          @h3_tags << h3.text
+        end
       end
       # Store content from h4 tags into the array created above.
       @noko_page.css('h4').each do |h4|
-        @h4_tags << h4.text
+        if h4.text.strip.length > 1
+          @h4_tags << h4.text
+        end
       end
       # Store content from p tags into the array created above.
       @noko_page.css('p').each do |p_tag|
-        @p_tags << p_tag.text
+        if p_tag.text.strip.length > 1
+          @p_tags << p_tag.text
+        end
       end
       # Store content from li tags into the array created above.
       @noko_page.css('li').each do |li|
         @li_tags << li.text
       end
 
+      # Need to get the img 'src', so I can display the photo on my results page
       @imgs = @noko_page.css('img').map { |x| x['src'] }
 
-      # @noko_page.css('img').attr('src').each do |src|
-      #   @imgs << src.text
-      # end
+      # Fetching all hrefs from a tags
+      ### IMPORTANT: Since external links can be in the form of hrefs or img tags, I need to map out only the href's
       @links = @noko_page.css('a').map { |x| x['href'] }
-      ### IMPORTANT: Since external links can be in the form of hrefs or img tags, I need to create a case statement to make sure I am capturing both of these
-      # @links = @noko_page.css('a', 'img').map{ |tag|
-      #   case tag.name.downcase
-      #     when 'a'
-      #       tag['href']
-      #     when 'img'
-      #       tag['src']
-      #   end
-      #   }
+
+      @showableLinks = []
+      # Filtering out bad links
+      @links.each do |link|
+        if link[0..3].downcase == "http"
+          @showableLinks << link
+        end
+      end
+
     end
-  # else
   end
 
   def new
@@ -82,11 +92,9 @@ class SearchesController < ApplicationController
   end
 
   def create
-    # find_user
     @search = Search.new(search_params)
-    # @search.user_id = @user.id
     @search.user_id = session.id
-    # binding.pry
+
     begin
       @raw = HTTParty.get(@search.url)
       @parsed_page = Nokogiri::HTML(@raw)
