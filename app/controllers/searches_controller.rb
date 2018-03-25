@@ -75,9 +75,13 @@ class SearchesController < ApplicationController
 
       @showableLinks = []
       # Filtering out bad links
-      @links.each do |link|
-        if link[0..3].downcase == "http"
-          @showableLinks << link
+      if @links.length > 0
+        @links.each do |link|
+          if !link.nil?
+            if link[0..3].downcase == "http"
+              @showableLinks << link
+            end
+          end
         end
       end
 
