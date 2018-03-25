@@ -61,7 +61,7 @@
       </div>
 
       <div id="h1_tags">
-        <h1>H1 Tags</h1>
+        <h1>H1 Tags <small>(<%= @h1_tags.length %>)</small></h1>
         <% if @h1_tags.length > 0 %>
         <ul>
           <% @h1_tags.each do |h1| %>
@@ -70,16 +70,13 @@
         </ul>
         <% else %>
         <div class="alert alert-warning" role="alert">
-          No H1 tags on this website!
-        </div>
-        <div class="noTags">
-          <p>No H1 tags on this website!</p>
+          No <strong>&lt;H1&gt;</strong> tags on this website!
         </div>
         <% end %>
       </div>
 
       <div id="h2_tags">
-        <h1>H2 Tags</h1>
+        <h1>H2 Tags <small>(<%= @h2_tags.length %>)</small></h1>
         <% if @h2_tags.length > 0 %>
         <ul>
           <% @h2_tags.each do |h2| %>
@@ -88,13 +85,13 @@
         </ul>
         <% else %>
         <div class="alert alert-warning" role="alert">
-          No &lt;H2&gt; tags on this website!
+          No <strong>&lt;H2&gt;</strong> tags on this website!
         </div>
         <% end %>
       </div>
 
       <div id="h3_tags">
-        <h1>H3 Tags</h1>
+        <h1>H3 Tags <small>(<%= @h3_tags.length %>)</small></h1>
         <% if @h3_tags.length > 0 %>
         <ul>
           <% @h3_tags.each do |h3| %>
@@ -103,13 +100,13 @@
         </ul>
         <% else %>
         <div class="alert alert-warning" role="alert">
-          No &lt;H3&gt; tags on this website!
+          No <strong>&lt;H3&gt;</strong> tags on this website!
         </div>
         <% end %>
       </div>
 
       <div id="h4_tags">
-        <h1>H4 Tags</h1>
+        <h1>H4 Tags <small>(<%= @h4_tags.length %>)</small></h1>
         <% if @h4_tags.length > 0 %>
         <ul>
           <% @h4_tags.each do |h4| %>
@@ -118,13 +115,13 @@
         </ul>
         <% else %>
         <div class="alert alert-warning" role="alert">
-          No &lt;H4&gt; tags on this website!
+          No <strong>&lt;H4&gt;</strong> tags on this website!
         </div>
         <% end %>
       </div>
 
       <div id="p_tags">
-        <h1>P Tags</h1>
+        <h1>P Tags <small>(<%= @p_tags.length %>)</small></h1>
         <% if @p_tags.length > 0 %>
         <ul>
           <% @p_tags.each do |p_tag| %>
@@ -133,28 +130,28 @@
         </ul>
         <% else %>
         <div class="alert alert-warning" role="alert">
-          No &lt;P&gt; tags on this website!
+          No <strong>&lt;P&gt;</strong> tags on this website!
         </div>
         <% end %>
       </div>
 
       <div id="links">
-        <h1>Links</h1>
-        <% if @links.length > 0 %>
+        <h1>Links <small>(<%= @showableLinks.length %>)</small></h1>
+        <% if @showableLinks.length > 0 %>
         <ul>
-          <% @links.each do |link| %>
+          <% @showableLinks.each do |link| %>
           <li><a href="<%= link %>" target="_blank"> <%= link %> </a></li>
           <% end %>
         </ul>
         <% else %>
         <div class="alert alert-warning" role="alert">
-          No &lt;Links&gt; on this website!
+          No <strong>&lt;Links&gt;</strong> on this website!
         </div>
         <% end %>
       </div>
 
       <div id="photoContainer">
-        <h1>Photos</h1>
+        <h1>Photos <small>(<%= @imgs.length %>)</small></h1>
         <% if @imgs.length > 0 %>
         <% @imgs.each do |i| %>
         <div class="photos">
@@ -163,7 +160,7 @@
         </div>
         <% else %>
         <div class="alert alert-warning" role="alert">
-          No &lt;Photos&gt; on this website!
+          No <strong>&lt;Photos&gt;</strong> on this website!
         </div>
         <% end %>
       </div>
